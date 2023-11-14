@@ -2,6 +2,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
+console.log('start');
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -16,11 +18,22 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('blocklet-ext.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello VSCode!');
+		vscode.window.showInformationMessage('jianchao yyds!');
 	});
 
 	context.subscriptions.push(disposable);
+
+	let qa = vscode.commands.registerCommand('blocklet-ext.qa', () => {
+		// The code you place here will be executed every time your command is executed
+		// Display a message box to the user
+		vscode.window.showInformationMessage('jianchao qa!');
+	});
+
+	context.subscriptions.push(qa);
+
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+	console.log('end');
+}

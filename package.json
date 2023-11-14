@@ -1,5 +1,6 @@
 {
   "name": "blocklet-ext",
+  "publisher": "skypesky",
   "displayName": "blocklet-ext",
   "description": "",
   "version": "0.0.1",
@@ -16,6 +17,10 @@
       {
         "command": "blocklet-ext.helloWorld",
         "title": "Hello World"
+      },
+      {
+          "command": "blocklet-ext.qa",
+          "title": "qa"
       }
     ]
   },
